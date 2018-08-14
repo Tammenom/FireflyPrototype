@@ -1,0 +1,2 @@
+D:\Unity\Firefly\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
+D:\Unity\Firefly\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache
