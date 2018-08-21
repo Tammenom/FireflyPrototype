@@ -1,6 +1,6 @@
 WindowsStandalone
 PlayerPath?
-C:/Users/McCookie/Desktop/test_fireflyy/firefly_006_Data/Firefly.exe
+C:/Users/McCookie/Desktop/test_fireflyy/007/Firefly.exe
 SceneListBegin?
 Assets/02test.unity
 SceneListEnd?
@@ -206,19 +206,22 @@ f351a53a5bb6578f76af7819b5eb8592 Vuforia.UnityExtensions.dll:Vuforia.VuforiaConf
 ad24de185ef9a605870b931cda4f181e Vuforia.UnityExtensions.dll:Vuforia.VuMarkBehaviour
 c31ff9acb65f7a15b5c6fd77c3314d83 Vuforia.UnityExtensions.dll:Vuforia.WireframeBehaviour
 486cd95c82d8305219c352c06b776e1f Vuforia.UnityExtensions.dll:Vuforia.WireframeTrackableEventHandler
+486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.PauseMenu
 f16835701e71dd5d6fb1fed4b7aff1d8 Unity.TextMeshPro.dll:TMPro.TMP_Asset
 aff6f42589301fb2188ebc9e62508e1b Assembly-CSharp.dll:.GvrAllEventsTrigger
 b66f5b029ce56d4232498c8a84cdb230 Assembly-CSharp.dll:.GvrAudioListener
+3c994e4d62d2566dd39543297712c413 Assembly-CSharp.dll:.FollowRacer
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.GvrPointerManager
 486cd95c82d8305219c352c06b776e1f Unity.TextMeshPro.dll:TMPro.TMP_SpriteAnimator
 3ee2cfb8719ed9473ef5d975bd88eca7 Assembly-CSharp.dll:.AudioManager
+0d1772231c5ca1b5a15a05d9c5001bec Assembly-CSharp.dll:.FollowPlayer
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.GE_ToggleFullScreenUI
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.HitWoshTrigger
 8dc414f0e3f512b680177c57e8d08e3e Assembly-CSharp.dll:.GvrTrackedController
 114f0cc7a933eba0210dca55a814a26d Assembly-CSharp.dll:.GvrLaserPointer
 eaf0bcdb10d442a4029d615f41d09957 Unity.TextMeshPro.dll:TMPro.TextContainer
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.InputControl
-2f4123e3ece97eae3acfde95429d17a3 Assembly-CSharp.dll:.ParticleController
+1455fbffc07160b119113b21e792be48 Assembly-CSharp.dll:.ParticleController
 201273fb4f889724fb090164b7d6c657 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
 486cd95c82d8305219c352c06b776e1f UnityEngine.Networking.dll:UnityEngine.Networking.NetworkBehaviour
 0f27c39183b9eb95eba0a228bea28273 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkDiscovery
@@ -237,7 +240,7 @@ f3fa8cf0f80c9709aa54cffc3a136bc6 Assembly-CSharp.dll:Gvr.Internal.InstantPreview
 65aff7dc98cbbc38039575dae9d84095 Assembly-CSharp.dll:.WoshPoint
 72a8523b432c0a5317826b7a9e0a0e79 Unity.TextMeshPro.dll:TMPro.PackageResourceImporterWindow
 0917bd550a423c59cb946ff2d7b4efb1 Assembly-CSharp.dll:GoogleVR.HelloVR.ObjectController
-b5c730ef9b56fdbcf6b335cd9409abd3 Assembly-CSharp.dll:.HoverMotor
+d237cb5db9c86c98326b7024a80a21c3 Assembly-CSharp.dll:.HoverMotor
 e53cc67d84060d628c7f03fc725766d8 Unity.TextMeshPro.dll:TMPro.TMP_FontAsset
 392c5b921098bd4c139d9146d0efa6d7 Unity.TextMeshPro.dll:TMPro.TMP_Settings
 af5a81eabe9d4e546997b317aa9d8d77 Assembly-CSharp.dll:.SideEngineController
@@ -267,6 +270,7 @@ e1ea12ca952c81d81a9a21fdf34446ed UnityEngine.HoloLens.dll:UnityEngine.EventSyste
 dfd33ff9ae3ce8d7ca1f22b475ec2387 UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 aac9c55ae7ba4b95b852a7d9c191acd1 Unity.TextMeshPro.dll:TMPro.TextMeshProUGUI
 f806e1557c77bca314fc723de008fc91 Assembly-CSharp.dll:.GvrReticlePointer
+23cd29bb98e4bb8272adaae1ec89f874 Assembly-CSharp.dll:.GameLogic
 0a006f3734181ba8b26758f0866152c0 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 3ac8d5b7f4bcbee3d7bbb3a138961f8d Assembly-CSharp.dll:.GvrLaserVisual
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.MainMenu
@@ -285,7 +289,7 @@ b859e28154c40ba3c66637d39f682915 Assembly-CSharp.dll:.EngineHub
 4c95dbe3ca6f79dc80fc80539b8460c7 Assembly-CSharp.dll:.GvrPointerInputModule
 5c79f77e8bdc4433e7f19266d4a50278 Assembly-CSharp.dll:.GvrController
 f46eb1797fb520e80d5d530f879a2187 Assembly-CSharp.dll:GoogleVR.VideoDemo.MenuHandler
-3f4309fdbc352f9a75b9aaf53703e739 Assembly-CSharp.dll:.Goal
+a61df4dad0c4ef220f827e89a66428f5 Assembly-CSharp.dll:.Goal
 93307bd34e39d73fd24e00ec39c25a91 Unity.TextMeshPro.dll:TMPro.TMP_SubMesh
 182e416670915c50a548c38c642db0d8 Vuforia.UnityExtensions.dll:Vuforia.AnchorBehaviour
 f35860350df72508419d9f9fcd288594 Vuforia.UnityExtensions.dll:Vuforia.AnchorInputListenerBehaviour
@@ -321,7 +325,7 @@ ad24de185ef9a605870b931cda4f181e Vuforia.UnityExtensions.dll:Vuforia.VuMarkBehav
 c31ff9acb65f7a15b5c6fd77c3314d83 Vuforia.UnityExtensions.dll:Vuforia.WireframeBehaviour
 486cd95c82d8305219c352c06b776e1f Vuforia.UnityExtensions.dll:Vuforia.WireframeTrackableEventHandler
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:Gvr.Internal.EmulatorClientSocket
-93b3808d2d3fc3bff01987e2a91ba331 Assembly-CSharp.dll:.ShildController
+505478b6436fcf12248eb4057a0c5b48 Assembly-CSharp.dll:.ShildController
 5c79f77e8bdc4433e7f19266d4a50278 Assembly-CSharp.dll:.GvrControllerInput
 2d1ef5186ac8f5ee44b3e43d9ff420bb Assembly-CSharp.dll:GoogleVR.HelloVR.HelloVRManager
 e241599c091a039de89f5e0a1c125183 Assembly-CSharp.dll:.GvrControllerReticleVisual

@@ -235,38 +235,32 @@ public class HoverMotor : MonoBehaviour {
 
             if (turnInput != 0)
             {
-                if(speedAmount < speed)
+                if(speedAmount <= speed)
             {
-                speedAmount += Time.deltaTime * 100f;
+                speedAmount += Time.deltaTime * 40f;
             }
             if (speedAmount > speed)
             {
-                speedAmount -= Time.deltaTime * 100f;
+                speedAmount -= Time.deltaTime * 80f;
             }
 
             xRoto = Quaternion.Euler(turnInput *((speedAmount)/40), amount, 0);
         }
         else
         {
-            
-        }
-
-            
-
-            if (turnInput == 0)
-            {
-            if(speedAmount > 0) { speedAmount -= Time.deltaTime * 100f; }
+           
+            if(speedAmount > 0) { speedAmount -= Time.deltaTime * 150f; }
             
 
 
-            xRoto = Quaternion.Euler(0, amount, 0);
+            xRoto = Quaternion.Euler(turnInput * (speedAmount /40), amount, 0);
             }
 
             carRigidbody.transform.rotation = Quaternion.RotateTowards(transform.rotation, xRoto, 200f * Time.deltaTime);
-            counterXRo = 0;
+            
         //}
 
-        counterXRo += Time.deltaTime;
+        
 
        
 

@@ -18,6 +18,7 @@ public class ShildController : MonoBehaviour {
     public EnergyController MEC;
     private bool hasEnergy;
     public bool impact;
+    public bool shildsDown;
     //public Slider shildBar;
     //public RectTransform shildHub;
     private float timeBoosterValue;
@@ -30,6 +31,7 @@ void Start () {
         shildLevel = shildLevelMax;
         timeBoosterValue = Time.deltaTime;
         impact = false;
+        shildsDown = false;
 }
 
     // Update is called once per frame
@@ -83,7 +85,7 @@ void Start () {
 
                 if (shildLevel <= 0)
                 {
-                    SceneManager.LoadScene("Menu");
+                    shildsDown = true;
                 }
 
                 

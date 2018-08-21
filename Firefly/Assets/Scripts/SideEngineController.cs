@@ -66,7 +66,7 @@ public class SideEngineController : MonoBehaviour {
 
         if (SEActive && SELevel > 0)
         {
-            sideSpeed = sideSpeedBasic + SELevelMax / 10;
+            sideSpeed = sideSpeedBasic;
             SELevel = SELevel - SEFac * Time.deltaTime;
         }
 

@@ -6,6 +6,7 @@ public class ParticleController : MonoBehaviour {
 
     public GameObject MRacer;
     public HoverMotor MHM;
+    public ShildController MSC;
     private string MRState;
 
     public ParticleSystem rT;
@@ -14,6 +15,8 @@ public class ParticleController : MonoBehaviour {
     public ParticleSystem lbT;
     public ParticleSystem rBoost;
     public ParticleSystem lBoost;
+
+    public ParticleSystem explosion;
 
     private float tBSpeed;
     private float tBLife;
@@ -24,7 +27,9 @@ public class ParticleController : MonoBehaviour {
     private float tBSpeedB;
     private float tBLifeB;
     private bool tOnBoost;
-    
+
+    private float shieldsDownCounter;
+
 
 
 
@@ -35,6 +40,8 @@ public class ParticleController : MonoBehaviour {
     // Use this for initialization
     void Start () {
         MHM = MRacer.GetComponent<HoverMotor>();
+        MSC = MRacer.GetComponent<ShildController>();
+       
         
          tBSpeedB =10;
          tBLifeB = 0.4f;
@@ -44,7 +51,10 @@ public class ParticleController : MonoBehaviour {
         tBLA = 0.02f;
         tBSlow = 0.0125f;
         tBLS = 0.005f;
-        
+
+        shieldsDownCounter = 0.3f;
+        explosion.Stop();
+
     }
 	
 	// Update is called once per frame
@@ -58,6 +68,20 @@ public class ParticleController : MonoBehaviour {
 
         MRState = MHM.racerState;
 
+        if (MSC.shildsDown&& shieldsDownCounter >0)
+        {
+            explosion.Play();
+            shieldsDownCounter -= Time.deltaTime;
+
+        }
+        else
+        {
+            if(MSC.shildsDown && shieldsDownCounter <= 0)
+            {
+                Destroy(MRacer);
+            }
+               
+        }
         
 
         switch (MRState)

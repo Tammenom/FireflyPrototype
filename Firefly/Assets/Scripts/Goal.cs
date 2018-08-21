@@ -14,9 +14,17 @@ public class Goal : MonoBehaviour {
     public bool wrongDirection;
     public Text textRound;
     public Text textHighscore;
-    private float textCounter;
-    private float highscoreCounter;
-    private float actualHighscore;
+    public float textCounter;
+    private Text highscoreCounter;
+    private Text actualHighscore;
+    public float secondsCount;
+    public int minuteCount;
+    private int hourCount;
+    private float minHighscore;
+    private float secHighscore;
+    public float scorecounter;
+    public float finalscorecount;
+
 
     // Use this for initialization
     void Start () {
@@ -25,6 +33,11 @@ public class Goal : MonoBehaviour {
         enterGoal2 = false;
         wrongDirection = false;
         textCounter = 3;
+        secondsCount = 0;
+        minuteCount = 0;
+
+        scorecounter = 0;
+        finalscorecount = 0;
         
 
     }
@@ -32,8 +45,14 @@ public class Goal : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        highscoreCounter += Time.deltaTime;
+        secondsCount += (Time.deltaTime);
+        scorecounter += (Time.deltaTime);
 
+        if (secondsCount >= 60)
+        {
+            minuteCount++;
+            secondsCount = 0;
+        }
 
 
         switch (roundCount)
@@ -49,6 +68,7 @@ public class Goal : MonoBehaviour {
                 {
                     textCounter = 0;
                     textRound.text = "";
+                    textHighscore.text = "";
                 }
                 break;
 
@@ -59,7 +79,7 @@ public class Goal : MonoBehaviour {
                 if (textCounter < 4)
                 {
                     textRound.text = "Round 2";
-                    textHighscore.text = "Time " + actualHighscore;
+                    textHighscore.text = "Time: " + minHighscore + " min " + (int)secHighscore + " sec ";
                     textCounter += Time.deltaTime;
                 }
                 else
@@ -78,7 +98,7 @@ public class Goal : MonoBehaviour {
                 if (textCounter > 0)
                 {
                     textRound.text = "Final Lap";
-                    textHighscore.text = "Time " + actualHighscore;
+                    textHighscore.text = "Time: " + minHighscore + " min " + (int)secHighscore + " sec ";
                     textCounter -= Time.deltaTime;
                 }
                 else
@@ -95,14 +115,15 @@ public class Goal : MonoBehaviour {
                 if (textCounter < 5)
                 {
                     textRound.text = "Final";
-                    textHighscore.text = "Time " + actualHighscore;
-                    
-                    textCounter -= Time.deltaTime;
+                    textHighscore.text = "Time: " + minHighscore + " min " + (int)secHighscore + " sec ";
+
+                    textCounter += Time.deltaTime;
                 }
                 else
                 {
                     
                     textRound.text = "";
+                    
                 }
                 break;
 
@@ -159,7 +180,10 @@ public class Goal : MonoBehaviour {
         {
             if (!wrongDirection && enterGoal1 && enterGoal2)
             {
-                actualHighscore = highscoreCounter;
+                minHighscore = minuteCount;
+                secHighscore = secondsCount;
+                finalscorecount = scorecounter;
+                
                 roundCount++;
                
 
